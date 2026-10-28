@@ -13,6 +13,7 @@ public class Turret : MonoBehaviour
     [Header("set up")]
     public string enemyTag;
     public Transform partToRotate;
+    GameObject Bullet;
     private float fireCountDown;
     
     void Start()
