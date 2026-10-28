@@ -279,6 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9039583597943464375}
+  - component: {fileID: 2522822311932826711}
   m_Layer: 0
   m_Name: Gatlingturretbasic (2)
   m_TagString: Untagged
@@ -294,7 +295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7381746732059255370}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -55.52, y: 3.19, z: -26.28}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
@@ -305,6 +306,22 @@ Transform:
   - {fileID: 6459461664945595517}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2522822311932826711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7381746732059255370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605815acd1c63b645a3f9bb906e21cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Turret
+  target: {fileID: 0}
+  range: 100
+  enemyTag: Enemy
+  partToRotate: {fileID: 9039583597943464375}
 --- !u!1 &7828727567391113411
 GameObject:
   m_ObjectHideFlags: 0
