@@ -495,32 +495,33 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &2670392338188939181 stripped
+--- !u!1 &1200694266 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7381746732059255370, guid: fa488b99c9ae2e0408a6561a99174792, type: 3}
-  m_PrefabInstance: {fileID: 7660548460247450609}
+  m_CorrespondingSourceObject: {fileID: 5309563309892758245, guid: 30356d94e108ee7468c892628077ccaa, type: 3}
+  m_PrefabInstance: {fileID: 5937918308200127328}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3334056815991026967 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9039583597943464375, guid: fa488b99c9ae2e0408a6561a99174792, type: 3}
-  m_PrefabInstance: {fileID: 7660548460247450609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3334056815991026968
-MonoBehaviour:
+--- !u!64 &1200694270
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2670392338188939181}
+  m_GameObject: {fileID: 1200694266}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 605815acd1c63b645a3f9bb906e21cf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Turret
-  target: {fileID: 0}
-  range: 100
-  enemyTag: Enemy
-  partToRotate: {fileID: 3334056815991026967}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 80dc4fffdb6ec794da8a5f431086c505, type: 3}
 --- !u!1001 &5937918308200127328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -576,7 +577,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5309563309892758245, guid: 30356d94e108ee7468c892628077ccaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1200694270}
   m_SourcePrefab: {fileID: 100100000, guid: 30356d94e108ee7468c892628077ccaa, type: 3}
 --- !u!1001 &7660548460247450609
 PrefabInstance:
@@ -586,6 +590,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2522822311932826711, guid: fa488b99c9ae2e0408a6561a99174792, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 5959756254827941131, guid: e1f9fbb111cfe5b4fbb43aa1c7af4787, type: 3}
+    - target: {fileID: 2522822311932826711, guid: fa488b99c9ae2e0408a6561a99174792, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522822311932826711, guid: fa488b99c9ae2e0408a6561a99174792, type: 3}
+      propertyPath: turnSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7381746732059255370, guid: fa488b99c9ae2e0408a6561a99174792, type: 3}
       propertyPath: m_Name
       value: Gatlingturretbasic (2)
@@ -633,10 +649,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7381746732059255370, guid: fa488b99c9ae2e0408a6561a99174792, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3334056815991026968}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa488b99c9ae2e0408a6561a99174792, type: 3}
 --- !u!1001 &7763322499691358983
 PrefabInstance:
