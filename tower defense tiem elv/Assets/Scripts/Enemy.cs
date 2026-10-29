@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
             gameObject.AddComponent<SphereCollider>();
             gameObject.GetComponent<SphereCollider>().isTrigger = true;
         }
-        if (gameObject.Getcomponent<Rigidbody>() == null)
+        if (gameObject.GetComponent<Rigidbody>() == null)
         {
             gameObject.AddComponent<Rigidbody>();
             gameObject.GetComponent<Rigidbody>().useGravity = false;
