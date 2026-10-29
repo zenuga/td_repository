@@ -1,4 +1,8 @@
 ﻿<Solution>
-  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="ThryAssemblyDefinition.csproj" />
+  <Project Path="Poiyomi.ModularShaderSystem.csproj" />
+  <Project Path="Poi.Tools.csproj" />
+  <Project Path="ThryExternal.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
 </Solution>
