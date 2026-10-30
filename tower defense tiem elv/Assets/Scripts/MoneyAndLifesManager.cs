@@ -4,8 +4,9 @@ public class MoneyAndLifesManager : MonoBehaviour
 {
     public static MoneyAndLifesManager Instance { get; private set; }
     private int money = 100;
-    private int lifes = 250;
-
+    public int Money => money;   
+     private int lifes = 250;
+    public int Lifes => lifes;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
