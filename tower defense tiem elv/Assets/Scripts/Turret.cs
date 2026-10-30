@@ -9,6 +9,7 @@ public class Turret : MonoBehaviour
     public float range;
     public float turnSpeed;
     public float fireRate;
+    public int price;
 
     [Header("set up")]
     public string enemyTag;

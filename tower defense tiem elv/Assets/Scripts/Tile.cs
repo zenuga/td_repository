@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -29,15 +30,35 @@ public class Tile : MonoBehaviour
 
     public void IsGetingClicked()
     {
+        GameObject turretToBuild = BuildManeger.instance.GetTurretToBuild();
+
+        if (turretToBuild == null)
+        {
+            Debug.LogError("No turret prefab is selected.");
+            return;
+        }
+
         if (currentTurret != null)
         {
             Debug.Log("cant build here");
             return;
         }
 
-        GameObject turretToBuild = BuildManeger.instance.GetTurretToBuild();
-        currentTurret = (GameObject) Instantiate(turretToBuild, transform.position, transform. rotation);
-        
+        Turret turret = turretToBuild.GetComponent<Turret>();
+        if (turret == null)
+        {
+            Debug.LogError("The selected turret prefab has no Turret component.");
+            return;
+        }
+
+        if (MoneyAndLifesManager.Instance.Money < turret.price)
+        {
+            Debug.Log("not enough money");
+            return;
+        }
+
+        currentTurret = Instantiate(turretToBuild, transform.position, transform.rotation);
+        MoneyAndLifesManager.Instance.ChangeMoney(turret.price);
     }
 
     
