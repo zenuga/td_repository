@@ -57,7 +57,7 @@ public class Tile : MonoBehaviour
             return;
         }
 
-        currentTurret = Instantiate(turretToBuild, transform.position, transform.rotation);
+        currentTurret = Instantiate(turretToBuild, transform.position + Vector3.up * 2f, transform.rotation);
         MoneyAndLifesManager.Instance.ChangeMoney(turret.price);
     }
 
