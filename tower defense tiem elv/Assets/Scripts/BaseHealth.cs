@@ -14,4 +14,9 @@ public class BaseHealth : MonoBehaviour
             //stop spel to be added
         }
     }
+
+    void Awake()
+    {
+        currentHealth = maxHealth;
+    }
 }

@@ -8,6 +8,8 @@ TagManager:
   - Tower
   - Waypoints
   - Exit
+  - WaypointHolder
+  - WaveManager
   layers:
   - Default
   - TransparentFX

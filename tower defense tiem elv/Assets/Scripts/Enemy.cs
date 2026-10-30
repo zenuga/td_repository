@@ -7,8 +7,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private int enemyMaxHealth = 10;
     [SerializeField] public int currentEnemyHealth;
+    [SerializeField] private WaveManager WaveManager;
     private GameObject waypointfinder;
     private GameObject BaseHealthfinder;
+    private GameObject WaveManagerFinder;
 
     [SerializeField] private Transform currentwaypoint;
 
@@ -16,11 +18,14 @@ public class Enemy : MonoBehaviour
     {
         currentEnemyHealth = enemyMaxHealth;
 
-        waypointfinder = GameObject.FindWithTag("Waypoints");
+        waypointfinder = GameObject.FindWithTag("WaypointHolder");
         waypoints = waypointfinder.GetComponent<Waypoints>();
 
         BaseHealthfinder = GameObject.FindWithTag("Exit");
         baseHealth = BaseHealthfinder.GetComponent<BaseHealth>();
+
+        WaveManagerFinder = GameObject.FindWithTag("WaveManager");
+        WaveManager = WaveManagerFinder.GetComponent<WaveManager>();
 
         currentwaypoint = waypoints.GetNextWaypoint(currentwaypoint);
         transform.position = currentwaypoint.position;
@@ -37,6 +42,7 @@ public class Enemy : MonoBehaviour
             gameObject.AddComponent<Rigidbody>();
             gameObject.GetComponent<Rigidbody>().useGravity = false;
         }
+        
     }
 
     private void Update()
@@ -53,7 +59,21 @@ public class Enemy : MonoBehaviour
 		}
         else if (other.gameObject.CompareTag("Exit"))
         {
-            baseHealth.TakeDamage(gameObject.GetComponent<Enemy>().currentEnemyHealth);
+            WaveManager.enemiesLeft -= 1;
+            baseHealth.TakeDamage(currentEnemyHealth);
+            Destroy(gameObject);
         }
 	}
+
+
+        public void EnemyTakeDamage(int amount)
+    {
+        currentEnemyHealth = currentEnemyHealth - amount;
+
+        if (currentEnemyHealth == 0 || currentEnemyHealth >=0)
+        {
+            WaveManager.enemiesLeft -= 1;
+            Destroy(gameObject);
+        }
+    }
 }
