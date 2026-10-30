@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 public class Tile : MonoBehaviour
 {
     public Color hoverColor;
+    private GameObject currentTurret;
+
     private Renderer rend;
     private Color startColor;
    
@@ -23,6 +25,19 @@ public class Tile : MonoBehaviour
     public void ResetColor()
     {
         rend.material.color = startColor;
+    }
+
+    public void IsGetingClicked()
+    {
+        if (currentTurret != null)
+        {
+            Debug.Log("cant build here");
+            return;
+        }
+
+        GameObject turretToBuild = BuildManeger.instance.GetTurretToBuild();
+        currentTurret = (GameObject) Instantiate(turretToBuild, transform.position, transform. rotation);
+        
     }
 
     

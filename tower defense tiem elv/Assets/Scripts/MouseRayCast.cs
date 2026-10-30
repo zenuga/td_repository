@@ -21,6 +21,12 @@ public class MouseRayCast : MonoBehaviour
                 }
 
                 obj.IsGetingHit();
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    obj.IsGetingClicked();
+                }
+
                 lastTile = obj;
                 return;
             }

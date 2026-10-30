@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 9039583597943464375}
   - component: {fileID: 2522822311932826711}
   m_Layer: 0
-  m_Name: Gatlingturretbasic (2)
+  m_Name: StanderdTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
