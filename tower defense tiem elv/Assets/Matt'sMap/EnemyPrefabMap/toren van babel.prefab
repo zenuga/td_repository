@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0f9045d2db64a3a4db5f8fb5b38187e2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f9045d2db64a3a4db5f8fb5b38187e2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f9045d2db64a3a4db5f8fb5b38187e2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f9045d2db64a3a4db5f8fb5b38187e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -56,8 +68,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: toren van babel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f9045d2db64a3a4db5f8fb5b38187e2, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f9045d2db64a3a4db5f8fb5b38187e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5355700445232678398}
   m_SourcePrefab: {fileID: 100100000, guid: 0f9045d2db64a3a4db5f8fb5b38187e2, type: 3}
+--- !u!1 &4996101363277928647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f9045d2db64a3a4db5f8fb5b38187e2, type: 3}
+  m_PrefabInstance: {fileID: 5302107207231055254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5355700445232678398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996101363277928647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbc4973df10f77cf995a1e370b03053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  waypoints: {fileID: 0}
+  baseHealth: {fileID: 0}
+  moveSpeed: 5
+  enemyMaxHealth: 10
+  currentEnemyHealth: 0
+  WaveManager: {fileID: 0}
+  currentwaypoint: {fileID: 0}

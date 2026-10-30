@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3083817333863123379}
   - component: {fileID: 2117870585199822358}
   - component: {fileID: 4215588442408841948}
+  - component: {fileID: -5999170392555519798}
   m_Layer: 0
   m_Name: big ben
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,3 +91,22 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-5999170392555519798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413994453383172873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbc4973df10f77cf995a1e370b03053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  waypoints: {fileID: 0}
+  baseHealth: {fileID: 0}
+  moveSpeed: 5
+  enemyMaxHealth: 10
+  currentEnemyHealth: 0
+  WaveManager: {fileID: 0}
+  currentwaypoint: {fileID: 0}
